@@ -883,6 +883,8 @@ GTWR:
 	Building:
 	Health:
 		HP: 40000
+	Armor:
+		Type: Heavy
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:

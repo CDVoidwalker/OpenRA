@@ -30,9 +30,11 @@ namespace OpenRA.Mods.Cnc.Traits
 		public override object Create(ActorInitializer init) { return new ProductionAirdrop(init, this); }
 	}
 
-	class ProductionAirdrop : Production
+	class ProductionAirdrop : Production, INotifyCreated
 	{
 		readonly ProductionAirdropInfo info;
+		bool airdropProductionEnabled;
+
 		public ProductionAirdrop(ActorInitializer init, ProductionAirdropInfo info)
 			: base(init, info)
 		{
@@ -45,6 +47,15 @@ namespace OpenRA.Mods.Cnc.Traits
 				return false;
 
 			var owner = self.Owner;
+
+			if (!airdropProductionEnabled)
+			{
+				var outcome = base.Produce(self, producee, productionType, inits);
+                if (outcome)
+					Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio, self.Owner.Faction.InternalName);
+				return outcome;
+			}
+
 			var aircraftInfo = self.World.Map.Rules.Actors[info.ActorType].TraitInfo<AircraftInfo>();
 
 			// WDist required to take off or land
@@ -93,5 +104,11 @@ namespace OpenRA.Mods.Cnc.Traits
 
 			return true;
 		}
+
+		void INotifyCreated.Created(Actor self)
+		{
+			var airdropProduction = self.World.WorldActor.TraitOrDefault<AirdropProductionOption>();
+			airdropProductionEnabled = airdropProduction != null && airdropProduction.Enabled == true;
+        }
 	}
 }

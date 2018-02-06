@@ -1,7 +1,7 @@
 MCV:
 	Inherits: ^Vehicle
 	Valued:
-		Cost: 4000
+		Cost: 3700
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Buildable:
@@ -15,7 +15,7 @@ MCV:
 		Priority: 4
 		DecorationBounds: 36,36
 	Mobile:
-		Speed: 71
+		Speed: 60
 		Crushes: crate, infantry
 	Health:
 		HP: 120000
@@ -88,7 +88,7 @@ APC:
 	Inherits@CLOAK: ^AcceptsCloakCrate
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 550
+		Cost: 650
 	Tooltip:
 		Name: APC
 	Buildable:
@@ -165,10 +165,6 @@ ARTY:
 	WithMuzzleOverlay:
 	AutoTarget:
 		InitialStanceAI: Defend
-	SpawnActorOnDeath:
-		Actor: ARTY.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
 	Explodes:
 		Weapon: ArtilleryShell
 		EmptyWeapon: UnitExplode
@@ -244,10 +240,6 @@ BGGY:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-	SpawnActorOnDeath:
-		Actor: BGGY.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
 
 BIKE:
 	Inherits: ^Vehicle
@@ -284,10 +276,6 @@ BIKE:
 		LocalOffset: -128, -170, 170, -128, 170, 170
 		LocalYaw: 100, -100
 	AttackFrontal:
-	SpawnActorOnDeath:
-		Actor: BIKE.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
 
 JEEP:
 	Inherits: ^Vehicle
@@ -322,10 +310,6 @@ JEEP:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-	SpawnActorOnDeath:
-		Actor: JEEP.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
 
 LTNK:
 	Inherits: ^Tank
@@ -470,7 +454,7 @@ MSAM:
 	Inherits@CLOAK: ^AcceptsCloakCrate
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1000
+		Cost: 800
 	Tooltip:
 		Name: Rocket Launcher
 	Buildable:
@@ -499,10 +483,6 @@ MSAM:
 	AttackFrontal:
 	WithSpriteTurret:
 		AimSequence: aim
-	SpawnActorOnDeath:
-		Actor: MSAM.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
 
 MLRS:
 	Inherits: ^Tank
@@ -543,10 +523,6 @@ MLRS:
 	AutoTarget:
 		InitialStanceAI: Defend
 	RenderRangeCircle:
-	SpawnActorOnDeath:
-		Actor: MLRS.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true
 	ReloadAmmoPool:
 		Delay: 45
 		Count: 1
@@ -641,7 +617,3 @@ TRUCK:
 	DeliversCash:
 		Payload: 500
 		PlayerExperience: 50
-	SpawnActorOnDeath:
-		Actor: TRUCK.Husk
-		OwnerType: InternalName
-		EffectiveOwnerFromOwner: true

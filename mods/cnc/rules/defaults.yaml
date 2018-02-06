@@ -714,6 +714,7 @@
 	Sellable:
 		SellSounds: cashturn.aud
 	Capturable:
+		CaptureThreshold: 55
 	WithMakeAnimation:
 
 ^CivBuilding:
