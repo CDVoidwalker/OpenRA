@@ -25,3 +25,7 @@ ProductionTypeNaval: I
 PowerDown: X
 	Description: Power-down mode
 	Types: OrderGenerator
+
+Ability0: 1 Alt
+	Description: Ability crap
+	Types: OrderGenerator

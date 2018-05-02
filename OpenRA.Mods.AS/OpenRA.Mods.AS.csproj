@@ -94,6 +94,9 @@
     <Compile Include="Projectiles\RadBeam.cs" />
     <Compile Include="Projectiles\SpriteRailgun.cs" />
     <Compile Include="TraitsInterfaces.cs" />
+    <Compile Include="Traits\Abilities\AbilityBase.cs" />
+    <Compile Include="Traits\Abilities\AbilityEnergy.cs" />
+    <Compile Include="Traits\Abilities\DetonateWeaponWithTargeting.cs" />
     <Compile Include="Traits\AIDeployHelper.cs" />
     <Compile Include="Traits\Berserkable.cs" />
     <Compile Include="Traits\Conditions\GrantConditionOnProduction.cs" />
@@ -158,6 +161,7 @@
     <Compile Include="Traits\Conditions\TransformOnCondition.cs" />
     <Compile Include="Traits\Conditions\HordeBonus.cs" />
     <Compile Include="Traits\Conditions\GrantHordeBonus.cs" />
+    <Compile Include="Wigdets\Ingame\AbilityBarLogic.cs" />
   </ItemGroup>
   <ItemGroup />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -377,6 +377,10 @@ MCV:
 		Actor: MCV.Husk
 		OwnerType: InternalName
 		EffectiveOwnerFromOwner: true
+	DetonateWeaponWithTargeting:
+		Weapon: Atomic
+		Cooldown: 100
+	AbilityEnergy:
 
 JEEP:
 	Inherits: ^Vehicle

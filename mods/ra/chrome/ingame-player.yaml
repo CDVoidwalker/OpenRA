@@ -38,6 +38,31 @@ Container@PLAYER_WIDGETS:
 			Height: 44
 			ImageCollection: sidebar-bits
 			ImageName: commandbar-background
+		Container@ABILITY_BAR:
+			Logic: AbilityBarLogic
+			X: WINDOW_RIGHT - WIDTH - 25
+			Y: WINDOW_BOTTOM - HEIGHT - 14
+			Width: 275
+			Height: 26
+			Children:
+				Button@ABILITY_0:
+					Logic: AddFactionSuffixLogic
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: Ability0
+					DisableKeySound: true
+					TooltipText: Ability 0
+					TooltipDesc: Crashes the game, probably.
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: attack-move
 		Container@COMMAND_BAR:
 			Logic: CommandBarLogic
 			X: 14

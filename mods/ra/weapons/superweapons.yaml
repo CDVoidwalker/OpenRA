@@ -31,6 +31,8 @@ ParaBomb:
 		InvalidTargets: Ship, Structure
 
 Atomic:
+	Range: 20c0
+	MinRange: 5c0
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c0
